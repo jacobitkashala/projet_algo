@@ -43,3 +43,54 @@ function SommeDiag(matrix) {
     somDiagonaleSec += matrix[i][colonne]
   }
 }
+
+function MinWindowSubstring(strArr) {
+  const subs = substrings(strArr[0]);
+
+  subs.sort((a, b) => a.length - b.length);
+
+  for (let i = 0; i < subs.length; i++) {
+    if (containsAllCharacters(subs[i], strArr[1])) {
+      return subs[i];
+    }
+  }
+}
+
+function substrings(string) {
+  const subs = [];
+
+  for (let i = 0; i < string.length; i++) {
+    for (let j = i; j < string.length; j++) {
+      subs.push(string.slice(i, j + 1));
+    }
+  }
+
+  return subs;
+}
+
+function containsAllCharacters(string, other) {
+  const array = Array.from(string);
+
+  for (let i = 0; i < other.length; i++) {
+    const index = array.indexOf(other[i]);
+    if (index !== -1) {
+      array.splice(index, 1);
+    } else {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function palindrome(){
+  let n="maxam";
+console.log(n===n.split("").reverse().join("")?"palindrome":"palindrome");
+}
+//input :23 output :32
+
+function inverse(nbr){
+  if( nbr<=99){ 
+    return 10*(nbr%10) + Math.trunc(nbr/10)
+  }
+}

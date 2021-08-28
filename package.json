@@ -1,11 +1,10 @@
 {
-  "name": "nodejs-upload-excel-files",
+  "name": "Algo",
   "version": "1.0.0",
-  "description": "Nodejs Upload/Extract and Download/Import Excels files to MySQL",
-  "main": "index.js",
+  "description": "résolution des algo",
+  "main": "app.js",
   "scripts": {
-    "start": " nodemon node app.js clear ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " nodemon node app.js"
   },
   "keywords": [
     "nodejs",
