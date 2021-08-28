@@ -1,19 +1,38 @@
 function CamelCase(str) {
   let asc = 0;
   let result = "";
-  str = str.toLocaleLowerCase();
+  str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
     asc = str.codePointAt(i);
     if (asc >= 97 && asc <= 122) {
       result += String.fromCharCode(asc);
     }
     else {
-      let ascUpperCase = str.codePointAt(i+1)
-      result += (String.fromCharCode(ascUpperCase)).toLocaleUpperCase();
+      let ascCase = str.codePointAt(i + 1);
+      result += (String.fromCharCode(ascCase)).toUpperCase();
     }
   }
   return result;
 }
-let resultat = CamelCase("abc def%g");
+//
 
-console.log(resultat)
+function comptChar(str) {
+  let comptChar = {
+   char: "",
+    nbr: 0
+  }
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    for (let i = count = 1; i < str.length; count += +(char === str[i++])){
+      comptChar.char=char;
+      comptChar.nbr=count;
+    }
+    if(char !== str[i+1]){
+      console.log(comptChar.char+" "+comptChar.nbr);
+    }
+  }
+}
+
+
+
+
