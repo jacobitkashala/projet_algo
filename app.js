@@ -167,9 +167,6 @@ function numberFrequence (tab){
 	return -1
 }
 
-console.log(numberFrequence ([1,1,3,3]))
-
-
 function RunLength(string) { 
   let array = string.split("").sort();
   let counter = 0 ;
@@ -241,3 +238,16 @@ function binarySearch(array, n) {
   return -1;
 }
 
+function sommeTo(array,value) {
+  let tmp=0
+  for(let i=0;i<=array.length;i++){
+      tmp=array[i] + array[i+1]
+      if(tmp===value){
+          return tmp;
+          break;
+      }
+  }
+  return -1;
+}
+let result= sommeTo([1,2,6,8],0);
+console.log(result)
