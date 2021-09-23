@@ -1,3 +1,27 @@
+const priceProjet = [
+  [3, 4, 1],
+  [2, 1, 0],
+  [1, 1, 1],
+]
+let newArray = []
+let cout = 0;
+for (let i = 0; i < priceProjet.length; i++) {
+  let min = 0;
+  for (let j = 0; j < priceProjet.length; j++) {
+    newArray.push(priceProjet[i][j])
+  }
+
+  for (let k = 0; k < priceProjet.length; k++) {
+    if (priceProjet[min] > priceProjet[i]) {
+      min = i;
+    }
+  }
+
+  cout += Math.min(...newArray)
+
+  newArray = [];
+}
+console.log(cout)
 /*
 input:  data, serge%data
 */
@@ -74,9 +98,9 @@ function palindrome() {
 }
 
 function comptWord(str) {
-  let cpt=1;
-  for(const char of str){
-    if(char ===" "){
+  let cpt = 1;
+  for (const char of str) {
+    if (char === " ") {
       cpt++
     }
   }
@@ -138,45 +162,46 @@ function suiteFibo(nbr) {
 
 
 
-function Majorant() { 
+function Majorant() {
   var a = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4].
-  reduce(function (acc, curr) {
-     if (typeof acc[curr] == 'undefined') {
+    reduce(function (acc, curr) {
+      if (typeof acc[curr] == 'undefined') {
         acc[curr] = 1;
-      }else {
-         acc[curr] += 1;
-         } return acc; },{});
-  
-  console.log(a) 
-  for(const value in a){
+      } else {
+        acc[curr] += 1;
+      } return acc;
+    }, {});
+
+  console.log(a)
+  for (const value in a) {
     console.log(value)
-  } 
+  }
 }
 
-function numberFrequence (tab){
-	strTab = tab.join("");
-	let newTab = [];
-	for(let i = 0; i < strTab.length; i++){
-			let regExp = new RegExp(tab[i],"g");
-			newTab[i] = strTab.match(regExp).length
-	}
-	const maxFrequence = Math.max(...newTab);
-	const index = newTab.indexOf(maxFrequence);
-	const number = tab[index]
-	if(maxFrequence > tab.length/2)	return number ;
-	return -1
+function numberFrequence(tab) {
+  strTab = tab.join("");
+  let newTab = [];
+  for (let i = 0; i < strTab.length; i++) {
+    let regExp = new RegExp(tab[i], "g");
+    newTab[i] = strTab.match(regExp).length
+  }
+  const maxFrequence = Math.max(...newTab);
+  const index = newTab.indexOf(maxFrequence);
+  const number = tab[index]
+  if (maxFrequence > tab.length / 2) return number;
+  return -1
 }
 
-function RunLength(string) { 
+function RunLength(string) {
   let array = string.split("").sort();
-  let counter = 0 ;
+  let counter = 0;
   let runLength = new String("");
-  for(let i=0; i<=array.length; i++){
-      if(array[i] !== array[i+1]) {
-          runLength += counter + 1 + array[i];
-          counter = 0;
-      }
-      else counter++;
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] !== array[i + 1]) {
+      runLength += counter + 1 + array[i];
+      counter = 0;
+    }
+    else counter++;
   }
   return runLength;
 }
@@ -220,7 +245,7 @@ function mathChanllenge(num) {
   } else if (rest % 2 === 1) {
     return count + 1;
   } else {
-    return count + (num-11);
+    return count + (num - 11);
   }
 }
 
@@ -238,16 +263,80 @@ function binarySearch(array, n) {
   return -1;
 }
 
-function sommeTo(array,value) {
-  let tmp=0
-  for(let i=0;i<=array.length;i++){
-      tmp=array[i] + array[i+1]
-      if(tmp===value){
-          return tmp;
-          break;
-      }
+function sommeTo(array, value) {
+  let pivo = 0, i = 0, j = 0, tmp = 0;
+  array.sort();
+  let b = true;
+  while (true) {
+    pivo = array[i];
+    tmp = pivo + array[j];
+    if (tmp === value) {
+
+      return tmp;
+      break;
+    } else i++;
+
+    j++;
   }
   return -1;
 }
-let result= sommeTo([1,2,6,8],0);
+let result = sommeTo([1, 2, 6, 8], 10);
 console.log(result)
+
+function maxValue(array) {
+  let max = 0;
+  array.forEach(element => {
+    max = element;
+    if (max <= element) {
+      max = element;
+    }
+  });
+  return max;
+}
+
+function minValue(array) {
+  let min = 0;
+  array.forEach(element => {
+    min = element;
+    if (min >= element) {
+      min = element;
+    }
+  });
+  return min;
+}
+
+
+function triePanier(array) {
+  const min = minValue(array);
+  const max = maxValue(array);
+  const plage = max - min + 1;
+  const panier = [];
+  for (let i = 0; i < plage; i++) {
+    panier[i] = i;
+  }
+  console.log(panier)
+}
+// const arrayTrie = triePanier([2, 8, 6, 4, 10, 12, 6, 4, 2])
+
+function swap(array, i, j) {
+  const value = array[i];
+  array[i] = array[j]
+  array[j] = value;
+}
+
+const trieSelection = (items) => {
+  let indiceMin = 0;
+  for (let i = 0; i < items.length; i++) {
+    indiceMin = i;
+    for (let j = i + 1; j < items.length; j++) {
+      indiceMin = items[j] < items[indiceMin] ? j : i
+      if (i != indiceMin) {
+        swap(items, i, indiceMin)
+      }
+    }
+  }
+  console.log(items)
+}
+// trieSelection([1,20,3,4,99])
+//console.log(["d","a","c","l",].sort())
+
