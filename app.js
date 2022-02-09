@@ -1,23 +1,25 @@
-function triePanier(array){
-  let maxValue=Math.max(...array);
-  let minValue=Math.min(...array);
-  let panier=[];
-  // let tab[12]=0
-  for (let index = 0; index < maxValue; index++) {
-    panier.push(0)
-  }
-  for (let index = 0; index < panier.length; index++) {
-   if(index=array[index]){
-      panier[index]=index;
-   }
-  }
- console.log(panier);
-}
+let b =239.5 - (250 / 1000) * 10
+console.log(b)
+// function triePanier(array){
+//   let maxValue=Math.max(...array);
+//   let minValue=Math.min(...array);
+//   let panier=[];
+//   // let tab[12]=0
+//   for (let index = 0; index < maxValue; index++) {
+//     panier.push(0)
+//   }
+//   for (let index = 0; index < panier.length; index++) {
+//    if(index=array[index]){
+//       panier[index]=index;
+//    }
+//   }
+//  console.log('fff');
+// }
+// const fenetre=0;
 
-triePanier([2,8,6,4,10,12,6,4])
+// triePanier([2,8,6,4,10,12,6,4])
 
 // triePanier();
-
 
 // const priceProjet = [
 //   [3, 4, 1],
@@ -65,7 +67,7 @@ triePanier([2,8,6,4,10,12,6,4])
 //   aabbnn
 //  a:2
 //  b2
-//  n:2  
+//  n:2
 //  */
 
 // // function SommeDiag(matrix) {
@@ -178,10 +180,8 @@ triePanier([2,8,6,4,10,12,6,4])
 // }
 
 // /**
-//  * 
+//  *
 //  */
-
-
 
 // function Majorant() {
 //   var a = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4].
@@ -326,7 +326,6 @@ triePanier([2,8,6,4,10,12,6,4])
 //   return min;
 // }
 
-
 // function triePanier(array) {
 //   const min = minValue(array);
 //   const max = maxValue(array);
@@ -359,5 +358,4 @@ triePanier([2,8,6,4,10,12,6,4])
 //   console.log(items)
 // }
 // // trieSelection([1,20,3,4,99])
-// //console.log(["d","a","c","l",].sort())
-
+// //console.log(["d","a","c","l",].sort()

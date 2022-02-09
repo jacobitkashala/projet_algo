@@ -59,8 +59,9 @@ function ArithGeo(arr) {
       return "Geometric";
     }
     else {
-      return "-1";
+      return "-1"
     }
   }
   
 }
+
