@@ -1,28 +1,59 @@
 function ExOh(str) { 
-
-	if (str.length % 2 === 1) {
-	  return false;
-	} 
-	else {  
-	  let tot = 0;
-	  for (var i = 0; i < str.length; i++) {
-		if (str[i] === "x") {
-		  tot++;
-		}
-	  }
-	  
-	  if (tot === (str.length / 2)) {
-		return true;
-	  }
-	  else {
+	let t=0;
+	str = str.toUpperCase();
+	if (str.length%2===0){
+		for(let i in str) str[i]==='X'&& t++;
+		if(str.length/2=== t){ return true;}
 		return false;
-	  }
-  
 	}
+	return false;
 		   
   }
+  console.log(ExOh("xoXo"));
   
-  console.log(ExOh("xooxxxxooxoo"));
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*
+ const countCharacter=(string)=>{
+	let countA=0;
+	let countJ=0;
+	string=	string.toLowerCase();
+	for (let index in string) string[index]==="a" && countA++ 
+
+	for (let i = 0; i < string.length; i++) {
+		if (string[i] === "j") {
+			countJ++;
+		}
+	  }
+	console.log("A =" + countA);
+	console.log("J =" + countJ);
+
+ }
+
+ countCharacter("JacobitKashala")
+ */
+ 
+ 
+  //
 // let b =239.5 - (250 / 1000) * 10
 // const priceProjet = [3, 4, 1]
 //   let elue=priceProjet[2]
