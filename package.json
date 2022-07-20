@@ -4,7 +4,8 @@
   "description": "résolution des algo",
   "main": "app.js",
   "scripts": {
-    "start": " nodemon node app.js"
+    "start": "  node app.js",
+    "develop": " nodemon node app.js"
   },
   "keywords": [
     "nodejs",

@@ -139,6 +139,8 @@ let toDoList = [
         id: 2
     }
 ]
+console.log(toDoList);
+
 // const type = ["lege", "aigu", "aigu modere"];
 // const test="aigu modere";
 // //(typeMalnutri === 'Aigu modére' && 'error') || 'success'

@@ -1,5 +1,37 @@
-let b =239.5 - (250 / 1000) * 10
-console.log(b)
+function ExOh(str) { 
+
+	if (str.length % 2 === 1) {
+	  return false;
+	} 
+	else {  
+	  let tot = 0;
+	  for (var i = 0; i < str.length; i++) {
+		if (str[i] === "x") {
+		  tot++;
+		}
+	  }
+	  
+	  if (tot === (str.length / 2)) {
+		return true;
+	  }
+	  else {
+		return false;
+	  }
+  
+	}
+		   
+  }
+  
+  console.log(ExOh("xooxxxxooxoo"));
+// let b =239.5 - (250 / 1000) * 10
+// const priceProjet = [3, 4, 1]
+//   let elue=priceProjet[2]
+//   const filter=priceProjet.filter(item =>(item !== elue))
+
+//   const p=[elue,...filter]
+
+// console.log(priceProjet.length)
+// console.log(p)
 // function triePanier(array){
 //   let maxValue=Math.max(...array);
 //   let minValue=Math.min(...array);
