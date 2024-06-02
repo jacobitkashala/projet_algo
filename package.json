@@ -2,10 +2,10 @@
   "name": "e",
   "version": "1.0.0",
   "description": "résolution des algo",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "  node app.js",
-    "develop": " nodemon node app.js"
+    "start": "  node index.js",
+    "develop": " nodemon node index.js"
   },
   "keywords": [
     "nodejs",

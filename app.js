@@ -1,38 +1,19 @@
-function ExOh(str) { 
-	let t=0;
-	str = str.toUpperCase();
-	if (str.length%2===0){
-		for(let i in str) str[i]==='X'&& t++;
-		if(str.length/2=== t){ return true;}
-		return false;
-	}
-	return false;
-		   
-  }
-  console.log(ExOh("xoXo"));
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /*
+// function ExOh(str) {
+// 	let t=0;
+// 	str = str.toUpperCase();
+// 	if (str.length%2===0){
+// 		for(let i in str) str[i]==='X'&& t++;
+// 		if(str.length/2=== t){ return true;}
+// 		return false;
+// 	}
+// 	return false;
+
+//   }
+//   console.log(ExOh("xoXo"));
+
+
+
+/*
  const countCharacter=(string)=>{
 	let countA=0;
 	let countJ=0;
@@ -51,9 +32,8 @@ function ExOh(str) {
 
  countCharacter("JacobitKashala")
  */
- 
- 
-  //
+
+//
 // let b =239.5 - (250 / 1000) * 10
 // const priceProjet = [3, 4, 1]
 //   let elue=priceProjet[2]
