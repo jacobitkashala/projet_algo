@@ -14,6 +14,5 @@ function ABCheck(str) {
   }
 }
 function ABCheckOptimize(str) {
-  var match = str.search(/a...b/);
-  return match > -1 ? true : false;
+  return str.search(/a...b/) > -1 ? true : false;
 }
