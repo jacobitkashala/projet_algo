@@ -39,3 +39,12 @@ function Palindrome(str) {
   } 
 
 }
+function Palindrome2(str) { 
+  //console.log( str.toString().toLowerCase().split("").reverse().join(""))
+  //console.log( str.toString().toLowerCase())
+
+ return str.toString().toLowerCase().split("").reverse().join("") === str.toString().toLowerCase()? true: false;
+
+}
+
+console.log(Palindrome2("21"))
