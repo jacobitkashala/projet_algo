@@ -47,3 +47,4 @@ function ExOh(str) {
   }
          
 }
+console.log("valu  "+ ExOh("str"));
